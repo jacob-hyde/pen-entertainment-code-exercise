@@ -12,6 +12,13 @@ Docker is used to run the application and the database. Some basic feature tests
 Run the phpunit tests from your local machine, as they are looking to use localhost to connect to the site. (this could be changed to use Docker).
 1. run `./vendor/bin/phpunit tests` in the app directory
 
+### API Endpoints
+- GET /users
+- POST /users {name: string, email: string}
+- DELETE /users/{id}
+- POST /users/{id}/earn {points: int, description: string}
+- POST /users/{id}/redeem {points: int, description: string}
+
 ### Thoughts & Possible Changes
 - Could add error handling for failed database statements.
 - Validation could be more streamlined, so there is no repetitive checking for errors and handling them within each controller method.
